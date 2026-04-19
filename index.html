@@ -289,23 +289,13 @@
     }
 
     /* ── FLOW DIAGRAM ────────────────────────────────────── */
-    .flow-row1 {
+    .flow-full-grid {
       display: grid;
-      grid-template-columns: 1fr 40px 1fr 40px 1fr;
-      align-items: center;
-      gap: 0;
-      margin-bottom: 20px;
-    }
-    .flow-row2 {
-      display: grid;
-      grid-template-columns: 1fr 40px 1fr;
+      grid-template-columns: 1fr 48px 1fr 48px 1fr;
+      grid-template-rows: auto 20px auto auto auto;
+      row-gap: 12px;
+      column-gap: 0;
       align-items: stretch;
-      gap: 0;
-    }
-    .flow-sources {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
     }
     .flow-box {
       background: rgba(255,255,255,0.04);
@@ -604,12 +594,12 @@
       .snapshot-grid { grid-template-columns: 1fr; }
       .pillars-grid { grid-template-columns: 1fr; }
 
-      .flow-row1 { grid-template-columns: 1fr; }
-      .flow-row1 .arrow { transform: rotate(90deg); padding: 4px 0; }
-
-      .flow-row2 { grid-template-columns: 1fr; }
-      .flow-arrow-mid { padding-top: 0 !important; transform: rotate(90deg); font-size: 20px; padding: 6px 0 !important; }
-      .flow-policy { min-height: unset; }
+      .flow-full-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: unset;
+      }
+      .flow-full-grid > * { grid-column: 1 !important; grid-row: unset !important; }
+      .flow-full-grid .arrow { transform: rotate(90deg); padding: 4px 0; }
 
       .benefits-grid { grid-template-columns: 1fr; }
       .estate-grid { grid-template-columns: 1fr; }
@@ -725,67 +715,76 @@
       <span class="eyebrow">How the Money Moves</span>
       <h2 class="sec-title" style="color:var(--white); margin-bottom:36px;">The Infinite Loop of Your Money</h2>
 
-      <!-- Row 1 -->
-      <div class="flow-row1">
-        <div class="flow-box">
+      <div class="flow-full-grid">
+
+        <!-- ROW 1: 401k → FIA → Retirement -->
+        <div class="flow-box" style="grid-column:1; grid-row:1;">
           <div class="flow-icon">🏦</div>
           <div class="flow-title">401(k) Balance</div>
           <div class="flow-amount">$300k</div>
           <div class="flow-sub">Rolled over tax-free via direct transfer</div>
         </div>
-        <div class="arrow">→</div>
-        <div class="flow-box highlight">
+        <div class="arrow" style="grid-column:2; grid-row:1; display:flex; align-items:center; justify-content:center;">→</div>
+        <div class="flow-box highlight" style="grid-column:3; grid-row:1;">
           <div class="flow-icon">🛡️</div>
           <div class="flow-title">Fixed Index Annuity</div>
           <div class="flow-sub">Market risk eliminated. Participates in growth; never loses to a downturn. Guaranteed to be there at retirement.</div>
         </div>
-        <div class="arrow">→</div>
-        <div class="flow-box">
+        <div class="arrow" style="grid-column:4; grid-row:1; display:flex; align-items:center; justify-content:center;">→</div>
+        <div class="flow-box" style="grid-column:5; grid-row:1;">
           <div class="flow-icon">💰</div>
           <div class="flow-title">Retirement Income</div>
           <div class="flow-sub">Turns on as guaranteed lifetime income at retirement; complements Social Security.</div>
         </div>
-      </div>
 
-      <!-- Row 2 -->
-      <div class="flow-row2">
-        <div class="flow-sources">
-          <div class="flow-box">
-            <div class="flow-icon">📋</div>
-            <div class="flow-title">Monthly 401(k) Contributions</div>
-            <div class="flow-sub">Redirected from the 401(k). Same dollars; new destination.</div>
-          </div>
-          <div class="flow-box">
-            <div class="flow-icon">💵</div>
-            <div class="flow-title">Money Market</div>
-            <div class="flow-amount">$20k</div>
-            <div class="flow-sub">Moves to the policy. Multiplies into exponentially more coverage immediately.</div>
-          </div>
-          <div class="flow-box">
-            <div class="flow-icon">📈</div>
-            <div class="flow-title">FIA Free Withdrawals</div>
-            <div class="flow-sub">While you're still working, annual free withdrawals come out of the FIA and go directly into the policy; funding it for 7+ years without disrupting your take-home pay. Taxed once on the way across; tax-free from that point forward.</div>
-          </div>
+        <!-- SPACER ROW -->
+        <div style="grid-column:1/-1; grid-row:2;"></div>
+
+        <!-- SOURCE 1: Contributions -->
+        <div class="flow-box" style="grid-column:1; grid-row:3;">
+          <div class="flow-icon">📋</div>
+          <div class="flow-title">Monthly 401(k) Contributions</div>
+          <div class="flow-sub">Same dollars; new destination.</div>
         </div>
-        <div class="flow-arrow-mid">→</div>
-        <div class="flow-box primary flow-policy" style="padding: 24px 22px;">
-          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+        <div class="arrow" style="grid-column:2; grid-row:3; display:flex; align-items:center; justify-content:center;">→</div>
+
+        <!-- SOURCE 2: Money Market -->
+        <div class="flow-box" style="grid-column:1; grid-row:4;">
+          <div class="flow-icon">💵</div>
+          <div class="flow-title">Money Market</div>
+          <div class="flow-amount">$20k</div>
+          <div class="flow-sub">Multiplies into exponentially more coverage immediately.</div>
+        </div>
+        <div class="arrow" style="grid-column:2; grid-row:4; display:flex; align-items:center; justify-content:center;">→</div>
+
+        <!-- SOURCE 3: FIA Free Withdrawals -->
+        <div class="flow-box" style="grid-column:1; grid-row:5;">
+          <div class="flow-icon">📈</div>
+          <div class="flow-title">FIA Free Withdrawals</div>
+          <div class="flow-sub">While still working; funds the policy 7+ years without disrupting take-home pay. Taxed once on the way across; tax-free from that point forward.</div>
+        </div>
+        <div class="arrow" style="grid-column:2; grid-row:5; display:flex; align-items:center; justify-content:center;">→</div>
+
+        <!-- POLICY BOX: spans cols 3-5, rows 3-5 -->
+        <div class="flow-box primary" style="grid-column:3/6; grid-row:3/6; padding:24px 22px; text-align:left;">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
             <div class="flow-icon" style="background:rgba(24,139,246,0.15); margin:0; flex-shrink:0;">💎</div>
-            <div>
-              <div class="flow-title" style="font-size:15px; margin-bottom:2px;">Participating Whole Life Policy</div>
-              <div class="flow-label" style="margin:0;">Infinite Banking Structure</div>
+            <div style="text-align:left;">
+              <div class="flow-title" style="font-size:15px; margin-bottom:3px; text-align:left;">Participating Whole Life Policy</div>
+              <div class="flow-label" style="margin:0; text-align:left;">Infinite Banking Structure</div>
             </div>
           </div>
           <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
             <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>Tax-free growth with zero market risk; the insurance company is the most secure financial institution in the country</li>
             <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>Unbridled access to cash value at any time; no application, no repayment schedule, no disruption to growth</li>
             <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>Death benefit is larger than total contributions from day one; multiplies your money into a legacy windfall</li>
-            <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>Death benefit passes directly to your daughters and grandchildren; bypasses probate, courts, and delays entirely</li>
+            <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>Passes directly to your daughters and grandchildren; bypasses probate, courts, and delays entirely</li>
             <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>Critical, chronic, and terminal illness rider; you come with your own funding if care is ever needed</li>
-            <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>A true tax shelter; grows tax-free, accessed tax-free via policy loans, transfers to your family income-tax-free</li>
+            <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>True tax shelter; grows tax-free, accessed tax-free via policy loans, transfers to family income-tax-free</li>
             <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>Cash value can eliminate your mortgage at retirement or amplify your lifestyle; the choice is entirely yours</li>
           </ul>
         </div>
+
       </div>
     </div>
   </div>
