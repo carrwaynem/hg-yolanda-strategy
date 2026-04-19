@@ -299,7 +299,7 @@
     .flow-row2 {
       display: grid;
       grid-template-columns: 1fr 40px 1fr;
-      align-items: start;
+      align-items: stretch;
       gap: 0;
     }
     .flow-sources {
@@ -378,14 +378,15 @@
     .flow-arrow-mid {
       font-size: 24px;
       text-align: center;
-      padding-top: 80px;
       color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .flow-policy {
-      min-height: 220px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     /* ── BENEFIT CARDS ───────────────────────────────────── */
@@ -767,11 +768,23 @@
           </div>
         </div>
         <div class="flow-arrow-mid">→</div>
-        <div class="flow-box primary flow-policy">
-          <div class="flow-icon" style="background:rgba(24,139,246,0.15);">💎</div>
-          <div class="flow-title" style="font-size:16px; margin-bottom:6px;">Participating Whole Life Policy</div>
-          <div class="flow-label">Infinite Banking Structure</div>
-          <div class="flow-sub">Tax-free growth. Unbridled access. Living benefits. Legacy. Bypasses probate by default.</div>
+        <div class="flow-box primary flow-policy" style="padding: 24px 22px;">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <div class="flow-icon" style="background:rgba(24,139,246,0.15); margin:0; flex-shrink:0;">💎</div>
+            <div>
+              <div class="flow-title" style="font-size:15px; margin-bottom:2px;">Participating Whole Life Policy</div>
+              <div class="flow-label" style="margin:0;">Infinite Banking Structure</div>
+            </div>
+          </div>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+            <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>Tax-free growth with zero market risk; the insurance company is the most secure financial institution in the country</li>
+            <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>Unbridled access to cash value at any time; no application, no repayment schedule, no disruption to growth</li>
+            <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>Death benefit is larger than total contributions from day one; multiplies your money into a legacy windfall</li>
+            <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>Death benefit passes directly to your daughters and grandchildren; bypasses probate, courts, and delays entirely</li>
+            <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>Critical, chronic, and terminal illness rider; you come with your own funding if care is ever needed</li>
+            <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>A true tax shelter; grows tax-free, accessed tax-free via policy loans, transfers to your family income-tax-free</li>
+            <li style="display:flex; align-items:flex-start; gap:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.5;"><span style="color:var(--primary); font-size:7px; margin-top:5px; flex-shrink:0;">◆</span>Cash value can eliminate your mortgage at retirement or amplify your lifestyle; the choice is entirely yours</li>
+          </ul>
         </div>
       </div>
     </div>
