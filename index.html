@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yolanda's Custom Financial Strategy — Hidden Gems Financial</title>
-
-  <!-- HG Branding & Link Preview -->
   <meta name="description" content="A custom financial strategy prepared by Hidden Gems Financial | Wayne M. Carr — Bespoke Financial Strategies, Trust, Tax Mitigation, Insurance." />
   <meta property="og:title" content="Yolanda's Custom Financial Strategy" />
   <meta property="og:description" content="Prepared by Hidden Gems Financial | Wayne M. Carr — Bespoke Financial Strategies, Trust, Tax Mitigation, Insurance." />
@@ -17,485 +15,610 @@
   <meta name="twitter:title" content="Yolanda's Custom Financial Strategy" />
   <meta name="twitter:description" content="Prepared by Hidden Gems Financial | Wayne M. Carr" />
   <link rel="icon" type="image/png" href="https://assets.cdn.filesafe.space/VAzLM9UQAimhEsqIbaoE/media/64d12ed29b131f4bfb22d4f1.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+    /* ── VARIABLES ───────────────────────────────────────── */
     :root {
-      --navy:  #0d1b2a;
-      --gold:  #c9a84c;
-      --gold-light: #e8c87a;
-      --white: #ffffff;
-      --off-white: #f4f1eb;
-      --gray: #8a8a8a;
-      --light-gray: #e8e4dc;
-      --text: #1a1a1a;
+      --primary:      #7DA7C2;
+      --primary-dark: #5b8dae;
+      --primary-light: rgba(125,167,194,0.12);
+      --cta:          #188bf6;
+      --accent:       #37ca37;
+      --dark:         #0d1117;
+      --dark-2:       #131920;
+      --dark-card:    #161e28;
+      --white:        #ffffff;
+      --off-white:    #f5f5f5;
+      --gray:         #6F6F6F;
+      --gray-dark:    #555555;
+      --font-head:    'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body:    'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius:       10px;
+      --radius-lg:    18px;
+      --shadow:       0 4px 32px rgba(0,0,0,0.1);
+      --shadow-lg:    0 12px 56px rgba(0,0,0,0.22);
+      --transition:   0.28s ease;
     }
 
-    html { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--off-white); color: var(--text); }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 32px 24px 60px;
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--dark);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+
+    /* ── LAYOUT ──────────────────────────────────────────── */
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 72px 0; }
+    .section--dark { background: var(--dark); color: var(--white); }
+    .section--dark-2 { background: var(--dark-2); color: var(--white); }
+    .section--light { background: var(--off-white); }
+
+    .eyebrow {
+      font-family: var(--font-head);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .section--dark .eyebrow { color: var(--accent); }
+
+    .sec-title {
+      font-family: var(--font-head);
+      font-size: clamp(22px, 3.5vw, 32px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      letter-spacing: -0.4px;
     }
 
     /* ── HEADER ──────────────────────────────────────────── */
     .header {
-      background: var(--navy);
-      border-radius: 12px;
-      padding: 36px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 28px;
-    }
-
-    .header-left h1 {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.3;
-    }
-
-    .header-left p {
-      font-size: 13px;
-      color: var(--gold);
-      margin-top: 6px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-weight: 500;
-    }
-
-    .gem {
-      width: 56px;
-      height: 56px;
-      opacity: 0.85;
-    }
-
-    /* ── SNAPSHOT STRIP ──────────────────────────────────── */
-    .snapshot {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-
-    .snap-card {
-      background: var(--white);
-      border-radius: 10px;
-      padding: 20px 22px;
-      border-top: 3px solid var(--gold);
-    }
-
-    .snap-card .label {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--gray);
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      margin-bottom: 6px;
-    }
-
-    .snap-card .value {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--navy);
-    }
-
-    .snap-card .sub {
-      font-size: 12px;
-      color: var(--gray);
-      margin-top: 3px;
-    }
-
-    /* ── SECTION TITLES ──────────────────────────────────── */
-    .section-title {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 14px;
-    }
-
-    /* ── MONEY FLOW DIAGRAM ──────────────────────────────── */
-    .flow-section {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 30px 32px;
-      margin-bottom: 28px;
-    }
-
-    .flow-grid {
-      display: grid;
-      grid-template-columns: 1fr 48px 1fr 48px 1fr;
-      align-items: center;
-      gap: 0;
-      margin-top: 8px;
-    }
-
-    .flow-box {
-      background: var(--off-white);
-      border-radius: 10px;
-      padding: 16px 14px;
-      text-align: center;
-      border: 1.5px solid var(--light-gray);
+      background: var(--dark);
       position: relative;
+      overflow: hidden;
+      padding: 52px 0 48px;
     }
-
-    .flow-box.primary {
-      background: var(--navy);
-      border-color: var(--navy);
+    .header-glow {
+      position: absolute;
+      top: -20%;
+      right: -5%;
+      width: 560px;
+      height: 560px;
+      background: radial-gradient(circle, rgba(125,167,194,0.1) 0%, transparent 65%);
+      pointer-events: none;
     }
-
-    .flow-box.primary .box-title,
-    .flow-box.primary .box-sub { color: var(--white); }
-
-    .flow-box.highlight {
-      background: #fdf6e3;
-      border-color: var(--gold);
-    }
-
-    .box-icon {
-      font-size: 22px;
-      margin-bottom: 6px;
-    }
-
-    .box-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.3;
-    }
-
-    .box-amount {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--gold);
-      margin: 4px 0;
-    }
-
-    .box-sub {
-      font-size: 11px;
-      color: var(--gray);
-      margin-top: 3px;
-      line-height: 1.4;
-    }
-
-    .arrow {
-      text-align: center;
-      font-size: 22px;
-      color: var(--gold);
-      font-weight: 700;
-    }
-
-    /* Second row of flow */
-    .flow-row-2 {
-      display: grid;
-      grid-template-columns: 1fr 48px 1fr;
+    .header-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
       align-items: center;
-      gap: 0;
-      margin-top: 14px;
+      justify-content: space-between;
+      gap: 32px;
     }
-
-    /* ── THREE PILLARS ──────────────────────────────────── */
-    .three-pillars {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-
-    .pillar-card {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 24px 22px;
-      border-bottom: 3px solid var(--gold);
-    }
-
-    .pillar-icon {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-
-    .pillar-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-
-    .pillar-body {
-      font-size: 12.5px;
-      color: #444;
-      line-height: 1.6;
-    }
-
-    /* ── TWO COLUMN SECTION ──────────────────────────────── */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-bottom: 28px;
-    }
-
-    .card {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 26px 28px;
-    }
-
-    .card .card-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 14px;
-      padding-bottom: 10px;
-      border-bottom: 1.5px solid var(--light-gray);
-    }
-
-    .card .card-title span {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--white);
+    .header-left { flex: 1; }
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(125,167,194,0.1);
+      border: 1px solid rgba(125,167,194,0.25);
+      color: var(--primary);
+      font-family: var(--font-head);
       font-size: 10px;
       font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 20px;
-      margin-right: 8px;
-      letter-spacing: 0.04em;
-      vertical-align: middle;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 20px;
     }
-
-    .benefit-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .benefit-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 13px;
-      line-height: 1.5;
-      color: #333;
-    }
-
-    .benefit-list li::before {
-      content: '';
-      display: block;
-      width: 7px;
-      height: 7px;
-      min-width: 7px;
+    .header-badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
       border-radius: 50%;
-      background: var(--gold);
-      margin-top: 6px;
     }
-
-    /* ── STEPS SECTION ──────────────────────────────────── */
-    .steps-section {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 30px 32px;
-      margin-bottom: 28px;
+    .header h1 {
+      font-family: var(--font-head);
+      font-size: clamp(26px, 4vw, 44px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
     }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-top: 8px;
-    }
-
-    .step {
-      position: relative;
-    }
-
-    .step-num {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--navy);
-      color: var(--gold);
+    .header h1 span { color: var(--primary); }
+    .header-sub {
       font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      font-family: var(--font-head);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    .header-logo {
+      height: 72px;
+      width: auto;
+      opacity: 0.92;
+      flex-shrink: 0;
+    }
+
+    /* ── TRUST BAR ───────────────────────────────────────── */
+    .trust-bar {
+      background: var(--dark-2);
+      border-bottom: 1px solid rgba(125,167,194,0.1);
+      padding: 13px 0;
+      overflow: hidden;
+    }
+    .trust-track {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      animation: marquee 26s linear infinite;
+      width: max-content;
+    }
+    .trust-item {
+      font-family: var(--font-head);
+      font-size: 10px;
       font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .trust-item::before { content: '◆'; color: var(--primary); font-size: 7px; }
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── SNAPSHOT ────────────────────────────────────────── */
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .snap-card {
+      background: var(--white);
+      border: 1px solid rgba(125,167,194,0.18);
+      border-radius: var(--radius-lg);
+      padding: 26px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .snap-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--cta));
+    }
+    .snap-label {
+      font-family: var(--font-head);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+    .snap-value {
+      font-family: var(--font-head);
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .snap-sub {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    /* ── THREE PILLARS ───────────────────────────────────── */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .pillar-card {
+      background: var(--white);
+      border: 1px solid rgba(125,167,194,0.18);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .pillar-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--cta));
+    }
+    .pillar-num {
+      font-family: var(--font-head);
+      font-size: 52px;
+      font-weight: 900;
+      color: rgba(125,167,194,0.1);
+      line-height: 1;
+      margin-bottom: 10px;
+      letter-spacing: -2px;
+    }
+    .pillar-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(125,167,194,0.1);
+      border-radius: 13px;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+    .pillar-title {
+      font-family: var(--font-head);
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--dark);
       margin-bottom: 10px;
     }
-
-    .step-title {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 6px;
-      line-height: 1.3;
+    .pillar-body {
+      font-size: 13.5px;
+      color: var(--gray);
+      line-height: 1.7;
     }
 
-    .step-body {
-      font-size: 11.5px;
-      color: #555;
-      line-height: 1.55;
+    /* ── FLOW DIAGRAM ────────────────────────────────────── */
+    .flow-row1 {
+      display: grid;
+      grid-template-columns: 1fr 40px 1fr 40px 1fr;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 20px;
+    }
+    .flow-row2 {
+      display: grid;
+      grid-template-columns: 1fr 40px 1fr;
+      align-items: start;
+      gap: 0;
+    }
+    .flow-sources {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .flow-box {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(125,167,194,0.18);
+      border-radius: var(--radius-lg);
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .flow-box.highlight {
+      background: rgba(125,167,194,0.08);
+      border-color: var(--primary);
+    }
+    .flow-box.primary {
+      background: rgba(24,139,246,0.08);
+      border-color: rgba(24,139,246,0.4);
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .flow-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(125,167,194,0.12);
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      margin: 0 auto 10px;
+    }
+    .flow-box.primary .flow-icon {
+      background: rgba(24,139,246,0.15);
+    }
+    .flow-title {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .flow-amount {
+      font-family: var(--font-head);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    .flow-box.primary .flow-amount { color: var(--cta); }
+    .flow-sub {
+      font-size: 11px;
+      color: rgba(255,255,255,0.48);
+      line-height: 1.45;
+    }
+    .flow-label {
+      font-family: var(--font-head);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cta);
+      margin: 6px 0 4px;
+    }
+    .arrow {
+      text-align: center;
+      font-size: 20px;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .flow-arrow-mid {
+      font-size: 24px;
+      text-align: center;
+      padding-top: 80px;
+      color: var(--primary);
+    }
+    .flow-policy {
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* ── BENEFIT CARDS ───────────────────────────────────── */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .benefit-card {
+      background: var(--dark-card);
+      border: 1px solid rgba(125,167,194,0.1);
+      border-radius: var(--radius-lg);
+      padding: 36px 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    .benefit-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--cta));
+    }
+    .benefit-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(125,167,194,0.1);
+      border: 1px solid rgba(125,167,194,0.2);
+      color: var(--primary);
+      font-family: var(--font-head);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .benefit-title {
+      font-family: var(--font-head);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .benefit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .benefit-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.6;
+    }
+    .benefit-list li::before {
+      content: '◆';
+      color: var(--primary);
+      font-size: 7px;
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── STEPS ───────────────────────────────────────────── */
+    .process-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .process-item {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 28px;
+      padding-bottom: 40px;
+      position: relative;
+    }
+    .process-item:last-child { padding-bottom: 0; }
+    .process-item:not(:last-child) .step-line {
+      position: absolute;
+      left: 31px;
+      top: 64px;
+      bottom: 0;
+      width: 2px;
+      background: rgba(125,167,194,0.18);
+    }
+    .step-num {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--primary), var(--cta));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--white);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 4px 20px rgba(125,167,194,0.3);
+    }
+    .step-body { padding-top: 16px; }
+    .step-title {
+      font-family: var(--font-head);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .step-desc {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.75;
     }
 
     /* ── ESTATE SECTION ──────────────────────────────────── */
-    .estate-section {
-      background: var(--navy);
-      border-radius: 12px;
-      padding: 28px 32px;
-      margin-bottom: 28px;
-    }
-
-    .estate-section .section-title {
-      color: var(--gold);
-    }
-
     .estate-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-top: 8px;
+      gap: 20px;
     }
-
     .estate-card {
-      background: rgba(255,255,255,0.06);
-      border-radius: 10px;
-      padding: 20px 22px;
-      border: 1px solid rgba(201,168,76,0.25);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(125,167,194,0.18);
+      border-radius: var(--radius-lg);
+      padding: 28px 26px;
     }
-
-    .estate-card .ec-title {
-      font-size: 13px;
+    .estate-card-title {
+      font-family: var(--font-head);
+      font-size: 15px;
       font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 8px;
-    }
-
-    .estate-card p {
-      font-size: 12px;
-      color: rgba(255,255,255,0.78);
-      line-height: 1.6;
-    }
-
-    /* ── OUTCOME BAR ─────────────────────────────────────── */
-    .outcome-bar {
-      background: var(--gold);
-      border-radius: 10px;
-      padding: 20px 28px;
+      color: var(--primary);
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
-      gap: 16px;
-      margin-bottom: 28px;
+      gap: 10px;
+    }
+    .estate-card p {
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
     }
 
-    .outcome-bar .ob-label {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--navy);
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      white-space: nowrap;
+    /* ── BOTTOM LINE ─────────────────────────────────────── */
+    .bottom-line {
+      background: linear-gradient(140deg, var(--dark) 0%, #0a1e30 100%);
+      padding: 64px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-
-    .outcome-bar .ob-text {
-      font-size: 13px;
-      color: var(--navy);
-      line-height: 1.5;
+    .bottom-line::before {
+      content: '◆';
+      position: absolute;
+      font-size: 400px;
+      color: rgba(125,167,194,0.03);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      line-height: 1;
+    }
+    .bottom-line-title {
+      font-family: var(--font-head);
+      font-size: clamp(18px, 3vw, 28px);
+      font-weight: 900;
+      color: var(--white);
+      max-width: 720px;
+      margin: 0 auto 20px;
+      line-height: 1.35;
+      letter-spacing: -0.3px;
+      position: relative;
+    }
+    .bottom-line-text {
+      font-size: 15px;
+      color: rgba(255,255,255,0.58);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.8;
+      position: relative;
     }
 
     /* ── FOOTER ──────────────────────────────────────────── */
     .footer {
+      background: #080c10;
+      padding: 28px 0;
       text-align: center;
+    }
+    .footer p {
+      font-family: var(--font-head);
       font-size: 11px;
-      color: var(--gray);
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.5px;
     }
-
-    .footer strong {
-      color: var(--navy);
-    }
-
-    /* ── FLOW ROW 2 CLASSES (formerly inline) ───────────── */
-    .flow-row2 {
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: 1fr 48px 1fr;
-      align-items: start;
-      gap: 0;
-    }
-
-    .flow-sources {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .flow-arrow-mid {
-      font-size: 28px;
-      text-align: center;
-      padding-top: 60px;
-    }
-
-    .flow-policy {
-      min-height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+    .footer span { color: var(--primary); }
 
     /* ── MOBILE ──────────────────────────────────────────── */
     @media (max-width: 680px) {
-      body { padding: 16px 14px 48px; }
+      .section { padding: 52px 0; }
+      .wrap { padding: 0 16px; }
 
-      .header { padding: 22px 20px; flex-direction: column; align-items: flex-start; gap: 14px; }
-      .header-left h1 { font-size: 18px; }
-      .gem { width: 40px; height: 40px; }
+      .header { padding: 36px 0 32px; }
+      .header-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .header-logo { height: 52px; }
+      .header h1 { font-size: 26px; }
 
-      .snapshot { grid-template-columns: 1fr; }
-      .three-pillars { grid-template-columns: 1fr; }
+      .snapshot-grid { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: 1fr; }
 
-      .flow-section { padding: 22px 18px; }
+      .flow-row1 { grid-template-columns: 1fr; }
+      .flow-row1 .arrow { transform: rotate(90deg); padding: 4px 0; }
 
-      .flow-grid {
-        grid-template-columns: 1fr;
-      }
-      .flow-grid .arrow {
-        font-size: 20px;
-        padding: 6px 0;
-        transform: rotate(90deg);
-      }
+      .flow-row2 { grid-template-columns: 1fr; }
+      .flow-arrow-mid { padding-top: 0 !important; transform: rotate(90deg); font-size: 20px; padding: 6px 0 !important; }
+      .flow-policy { min-height: unset; }
 
-      .flow-row2 {
-        grid-template-columns: 1fr;
-        margin-top: 14px;
-      }
-      .flow-arrow-mid {
-        font-size: 20px;
-        padding: 8px 0 !important;
-        transform: rotate(90deg);
-      }
-      .flow-policy {
-        min-height: unset;
-      }
-
-      .two-col { grid-template-columns: 1fr; }
-      .steps-grid { grid-template-columns: 1fr 1fr; }
+      .benefits-grid { grid-template-columns: 1fr; }
       .estate-grid { grid-template-columns: 1fr; }
 
-      .outcome-bar { flex-direction: column; align-items: flex-start; gap: 10px; }
-      .outcome-bar .ob-label { white-space: normal; }
+      .process-item { grid-template-columns: 48px 1fr; gap: 18px; }
+      .step-num { width: 48px; height: 48px; font-size: 16px; }
+      .process-item:not(:last-child) .step-line { left: 23px; top: 48px; }
 
-      .card { padding: 20px 18px; }
-      .steps-section, .flow-section { padding: 22px 18px; }
-      .estate-section { padding: 22px 18px; }
+      .bottom-line { padding: 48px 0; }
     }
 
-    /* ── PRINT ──────────────────────────────────────────── */
-    @media print {
-      body { max-width: 100%; padding: 0; background: white; }
-      .header { border-radius: 0; }
+    @media (max-width: 400px) {
+      .header h1 { font-size: 22px; }
     }
   </style>
 </head>
@@ -503,194 +626,267 @@
 
   <!-- HEADER -->
   <div class="header">
-    <div class="header-left">
-      <h1>Yolanda's Custom Financial Strategy</h1>
-      <p>Prepared by Hidden Gems Financial &nbsp;·&nbsp; Wayne M. Carr</p>
+    <div class="header-glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="header-inner">
+        <div class="header-left">
+          <div class="header-badge">
+            <span class="header-badge-dot" aria-hidden="true"></span>
+            Custom Financial Strategy
+          </div>
+          <h1>Yolanda's <span>Financial Blueprint</span></h1>
+          <p class="header-sub">Prepared by Hidden Gems Financial &nbsp;·&nbsp; Wayne M. Carr</p>
+        </div>
+        <img
+          src="https://assets.cdn.filesafe.space/VAzLM9UQAimhEsqIbaoE/media/64d12ed29b131f4bfb22d4f1.png"
+          alt="Hidden Gems Financial"
+          class="header-logo"
+          onerror="this.style.display='none'"
+        />
+      </div>
     </div>
-    <svg class="gem" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="50,5 95,30 85,75 15,75 5,30" fill="none" stroke="#c9a84c" stroke-width="3"/>
-      <polygon points="50,5 70,30 50,75 30,30" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.6"/>
-      <line x1="5" y1="30" x2="95" y2="30" stroke="#c9a84c" stroke-width="1.5" opacity="0.5"/>
-    </svg>
   </div>
 
-  <!-- WHERE YOU STAND TODAY -->
-  <div class="section-title">Where You Stand Today</div>
-  <div class="snapshot">
-    <div class="snap-card">
-      <div class="label">401(k) Balance</div>
-      <div class="value">$300,000</div>
-      <div class="sub">Fully exposed to market risk</div>
+  <!-- TRUST BAR -->
+  <div class="trust-bar" aria-hidden="true">
+    <div class="trust-track">
+      <span class="trust-item">Tax-Free Growth</span>
+      <span class="trust-item">Infinite Banking</span>
+      <span class="trust-item">Legacy Planning</span>
+      <span class="trust-item">Market Risk Eliminated</span>
+      <span class="trust-item">Unbridled Access</span>
+      <span class="trust-item">Probate-Free Transfer</span>
+      <span class="trust-item">Retirement Income Guaranteed</span>
+      <span class="trust-item">Tax-Free Growth</span>
+      <span class="trust-item">Infinite Banking</span>
+      <span class="trust-item">Legacy Planning</span>
+      <span class="trust-item">Market Risk Eliminated</span>
+      <span class="trust-item">Unbridled Access</span>
+      <span class="trust-item">Probate-Free Transfer</span>
+      <span class="trust-item">Retirement Income Guaranteed</span>
     </div>
-    <div class="snap-card">
-      <div class="label">Money Market</div>
-      <div class="value">$20,000</div>
-      <div class="sub">Earning minimal interest; no leverage</div>
-    </div>
-    <div class="snap-card">
-      <div class="label">Time to Retirement</div>
-      <div class="value">6–7 Years</div>
-      <div class="sub">Enough runway to build something real</div>
+  </div>
+
+  <!-- WHERE YOU STAND -->
+  <div class="section section--light">
+    <div class="wrap">
+      <span class="eyebrow">Where You Stand Today</span>
+      <div class="snapshot-grid">
+        <div class="snap-card">
+          <div class="snap-label">401(k) Balance</div>
+          <div class="snap-value">$300,000</div>
+          <div class="snap-sub">Fully exposed to market risk with no access until retirement</div>
+        </div>
+        <div class="snap-card">
+          <div class="snap-label">Money Market</div>
+          <div class="snap-value">$20,000</div>
+          <div class="snap-sub">Earning minimal interest with no leverage or multiplication</div>
+        </div>
+        <div class="snap-card">
+          <div class="snap-label">Time to Retirement</div>
+          <div class="snap-value">6–7 Years</div>
+          <div class="snap-sub">Enough runway to build something real and lasting</div>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- WHAT THIS DOES FOR YOU -->
-  <div class="section-title">What This Strategy Does For You</div>
-  <div class="three-pillars">
-    <div class="pillar-card">
-      <div class="pillar-icon">🏆</div>
-      <div class="pillar-title">Legacy Windfall</div>
-      <div class="pillar-body">Your contributions don't just grow; they multiply. The whole life policy creates a death benefit that is significantly larger than what you put in, from the moment it is in force. Layered on top of your FIA income and Social Security, this is how your retirement becomes a ladder that ends in a substantial windfall for your daughters and grandchildren, paid directly to them, tax-free, with no courts and no delays.</div>
-    </div>
-    <div class="pillar-card">
-      <div class="pillar-icon">🏛️</div>
-      <div class="pillar-title">Tax Shelter</div>
-      <div class="pillar-body">Every dollar that moves into the policy crosses the tax threshold once and never again. It grows tax-free, is accessed tax-free, and transfers to your family income-tax-free. This is one of the few remaining legal tax shelters in the tax code. The government has no claim on it while it grows, when you access it, or when it passes to the people you love.</div>
-    </div>
-    <div class="pillar-card">
-      <div class="pillar-icon">🔓</div>
-      <div class="pillar-title">Access Your Money Now</div>
-      <div class="pillar-body">Your 401(k) has held your money hostage for years: locked up, inaccessible without penalties, completely outside your control. This strategy returns that control to you. Your cash value is available at any time, for any reason, with no application and no disruption to the growth. Your money works for you and stays accessible to you at the same time; enhancing your life today, not just your legacy tomorrow.</div>
+  <div class="section">
+    <div class="wrap">
+      <span class="eyebrow">What This Strategy Does For You</span>
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-num">01</div>
+          <div class="pillar-icon">🏆</div>
+          <div class="pillar-title">Legacy Windfall</div>
+          <div class="pillar-body">Your contributions don't just grow; they multiply. The whole life policy creates a death benefit that is significantly larger than what you put in from the moment it is in force. Layered on top of your FIA income and Social Security, this is how your retirement becomes a ladder that ends in a substantial windfall for your daughters and grandchildren, paid directly to them, tax-free, with no courts and no delays.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">02</div>
+          <div class="pillar-icon">🏛️</div>
+          <div class="pillar-title">Tax Shelter</div>
+          <div class="pillar-body">Every dollar that moves into the policy crosses the tax threshold once and never again. It grows tax-free, is accessed tax-free, and transfers to your family income-tax-free. This is one of the few remaining legal tax shelters in the tax code. The government has no claim on it while it grows, when you access it, or when it passes to the people you love.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">03</div>
+          <div class="pillar-icon">🔓</div>
+          <div class="pillar-title">Access Your Money Now</div>
+          <div class="pillar-body">Your 401(k) has held your money hostage for years: locked up, inaccessible without penalties, completely outside your control. This strategy returns that control to you. Your cash value is available at any time, for any reason, with no application and no disruption to the growth. Your money works for you and stays accessible to you at the same time; enhancing your life today, not just your legacy tomorrow.</div>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- HOW THE MONEY MOVES -->
-  <div class="flow-section">
-    <div class="section-title">How the Money Moves</div>
+  <div class="section section--dark">
+    <div class="wrap">
+      <span class="eyebrow">How the Money Moves</span>
+      <h2 class="sec-title" style="color:var(--white); margin-bottom:36px;">The Infinite Loop of Your Money</h2>
 
-    <!-- Row 1: Current assets → destination vehicles -->
-    <div class="flow-grid">
-      <div class="flow-box">
-        <div class="box-icon">🏦</div>
-        <div class="box-title">401(k) Balance</div>
-        <div class="box-amount">$300k</div>
-        <div class="box-sub">Rolled over tax-free via direct transfer</div>
+      <!-- Row 1 -->
+      <div class="flow-row1">
+        <div class="flow-box">
+          <div class="flow-icon">🏦</div>
+          <div class="flow-title">401(k) Balance</div>
+          <div class="flow-amount">$300k</div>
+          <div class="flow-sub">Rolled over tax-free via direct transfer</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="flow-box highlight">
+          <div class="flow-icon">🛡️</div>
+          <div class="flow-title">Fixed Index Annuity</div>
+          <div class="flow-sub">Market risk eliminated. Participates in growth; never loses to a downturn. Guaranteed to be there at retirement.</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="flow-box">
+          <div class="flow-icon">💰</div>
+          <div class="flow-title">Retirement Income</div>
+          <div class="flow-sub">Turns on as guaranteed lifetime income at retirement; complements Social Security.</div>
+        </div>
       </div>
-      <div class="arrow">→</div>
-      <div class="flow-box highlight">
-        <div class="box-icon">🛡️</div>
-        <div class="box-title">Fixed Index Annuity (FIA)</div>
-        <div class="box-sub">Market risk eliminated. Participates in market growth; never loses to a downturn. Guaranteed to be there when you retire.</div>
-      </div>
-      <div class="arrow">→</div>
-      <div class="flow-box">
-        <div class="box-icon">💰</div>
-        <div class="box-title">Retirement Income</div>
-        <div class="box-sub">FIA turns on as a guaranteed income stream at retirement; complements Social Security for life.</div>
-      </div>
-    </div>
 
-    <!-- Row 2: Contributions + MM + FIA withdrawals → Policy -->
-    <div class="flow-row2">
-      <div class="flow-sources">
-        <div class="flow-box">
-          <div class="box-icon">📋</div>
-          <div class="box-title">Monthly 401(k) Contributions</div>
-          <div class="box-sub">Redirected from the 401(k). Same dollars; new destination.</div>
+      <!-- Row 2 -->
+      <div class="flow-row2">
+        <div class="flow-sources">
+          <div class="flow-box">
+            <div class="flow-icon">📋</div>
+            <div class="flow-title">Monthly 401(k) Contributions</div>
+            <div class="flow-sub">Redirected from the 401(k). Same dollars; new destination.</div>
+          </div>
+          <div class="flow-box">
+            <div class="flow-icon">💵</div>
+            <div class="flow-title">Money Market</div>
+            <div class="flow-amount">$20k</div>
+            <div class="flow-sub">Moves to the policy. Multiplies into exponentially more coverage immediately.</div>
+          </div>
+          <div class="flow-box">
+            <div class="flow-icon">📈</div>
+            <div class="flow-title">FIA Free Withdrawals</div>
+            <div class="flow-sub">While you're still working, annual free withdrawals come out of the FIA and go directly into the policy; funding it for 7+ years without disrupting your take-home pay. Taxed once on the way across; tax-free from that point forward.</div>
+          </div>
         </div>
-        <div class="flow-box">
-          <div class="box-icon">💵</div>
-          <div class="box-title">Money Market</div>
-          <div class="box-amount">$20k</div>
-          <div class="box-sub">Moves to the policy. Multiplies into exponentially more coverage immediately.</div>
+        <div class="flow-arrow-mid">→</div>
+        <div class="flow-box primary flow-policy">
+          <div class="flow-icon" style="background:rgba(24,139,246,0.15);">💎</div>
+          <div class="flow-title" style="font-size:16px; margin-bottom:6px;">Participating Whole Life Policy</div>
+          <div class="flow-label">Infinite Banking Structure</div>
+          <div class="flow-sub">Tax-free growth. Unbridled access. Living benefits. Legacy. Bypasses probate by default.</div>
         </div>
-        <div class="flow-box">
-          <div class="box-icon">📈</div>
-          <div class="box-title">FIA Free Withdrawals</div>
-          <div class="box-sub">While you're still working, annual free withdrawals come out of the FIA and go directly into the policy. Taxed once on the way across the threshold; tax-free from that point forward.</div>
-        </div>
-      </div>
-      <div class="arrow flow-arrow-mid">→</div>
-      <div class="flow-box primary flow-policy">
-        <div class="box-icon">💎</div>
-        <div class="box-title" style="color: white; font-size: 15px;">Participating Whole Life Policy</div>
-        <div style="font-size: 11px; color: var(--gold); margin: 8px 0 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Infinite Banking Structure</div>
-        <div class="box-sub" style="color: rgba(255,255,255,0.75);">Tax-free growth. Unbridled access. Living benefits. Legacy. Bypasses probate by default.</div>
       </div>
     </div>
   </div>
 
   <!-- BENEFIT CARDS -->
-  <div class="two-col">
-    <div class="card">
-      <div class="card-title"><span>FIA</span>Fixed Index Annuity — The Shield</div>
-      <ul class="benefit-list">
-        <li>Your $300k is protected; zero exposure to market losses from this point forward; what you accumulate cannot be taken back by a downturn</li>
-        <li>Still participates in market growth when the market is up; gains are locked in annually on your anniversary date</li>
-        <li>Converts into a guaranteed income stream at retirement to complement Social Security; you cannot outlive it</li>
-        <li>While you're still working, free annual withdrawals come out of the FIA and go directly into the whole life policy; funding it for the next 7+ years without disrupting your take-home pay</li>
-        <li>Confinement rider: if you are ever confined to a nursing facility or receiving home health care, the rider provides enhanced access to your funds to cover those expenses without surrender penalties; your money is there when you need it most</li>
-        <li>Private contract: annuity assets are not publicly reported the way bank and brokerage accounts are; when properly structured, they are shielded from the nursing home spend-down process and cannot be forced out to satisfy Medicaid eligibility requirements the way a savings or investment account can</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div class="card-title"><span>IBC</span>Whole Life Policy — The Foundation</div>
-      <ul class="benefit-list">
-        <li>The death benefit is larger than your total contributions from day one; your $20k money market alone buys exponentially more in coverage than it could ever earn sitting in a bank account</li>
-        <li>Functions as your private bank: access your cash value at any time with no application, no repayment schedule, and no disruption to growth; the policy continues compounding as if the money never left</li>
-        <li>A legitimate tax shelter: grows tax-free, accessed tax-free via policy loans, and transfers to your family income-tax-free; there is no taxable event inside this structure</li>
-        <li>Built-in critical, chronic, and terminal illness rider; you come with your own funding if you ever need long-term care and never become a burden on the people you love</li>
-        <li>Death benefit passes directly to your daughters and grandchildren, bypassing probate, courts, and delays entirely</li>
-        <li>Cash value can eliminate your mortgage at retirement or amplify your lifestyle in any way you choose; that decision is yours alone</li>
-      </ul>
+  <div class="section section--dark-2">
+    <div class="wrap">
+      <span class="eyebrow">The Vehicles</span>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-tag">FIA</div>
+          <div class="benefit-title">Fixed Index Annuity — The Shield</div>
+          <ul class="benefit-list">
+            <li>Your $300k is protected; zero exposure to market losses from this point forward; what you accumulate cannot be taken back by a downturn</li>
+            <li>Still participates in market growth when the market is up; gains are locked in annually on your anniversary date</li>
+            <li>Converts into a guaranteed income stream at retirement to complement Social Security; you cannot outlive it</li>
+            <li>While you're still working, free annual withdrawals go directly into the whole life policy; funding it for 7+ years without disrupting your take-home pay</li>
+            <li>Confinement rider: if you are ever confined to a nursing facility or receiving home health care, the rider provides enhanced access to your funds to cover those expenses without surrender penalties</li>
+            <li>Private contract: not publicly reported like bank or brokerage accounts; when properly structured, shielded from the nursing home spend-down process and cannot be forced out to satisfy Medicaid eligibility requirements</li>
+          </ul>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-tag">IBC</div>
+          <div class="benefit-title">Whole Life Policy — The Foundation</div>
+          <ul class="benefit-list">
+            <li>The death benefit is larger than your total contributions from day one; your $20k money market alone buys exponentially more in coverage than it could ever earn sitting in a bank account</li>
+            <li>Functions as your private bank: access your cash value at any time with no application, no repayment schedule, and no disruption to growth; the policy continues compounding as if the money never left</li>
+            <li>A legitimate tax shelter: grows tax-free, accessed tax-free via policy loans, and transfers to your family income-tax-free; there is no taxable event inside this structure</li>
+            <li>Built-in critical, chronic, and terminal illness rider; you come with your own funding if you ever need long-term care and never become a burden on the people you love</li>
+            <li>Death benefit passes directly to your daughters and grandchildren, bypassing probate, courts, and delays entirely</li>
+            <li>Cash value can eliminate your mortgage at retirement or amplify your lifestyle in any way you choose; that decision is yours alone</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- HOW IT UNFOLDS -->
-  <div class="steps-section">
-    <div class="section-title">How This Unfolds Over the Next 7 Years</div>
-    <div class="steps-grid">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-title">Transfer &amp; Protect</div>
-        <div class="step-body">$300k moves from the 401(k) into a Fixed Index Annuity via a direct rollover. Market risk is eliminated immediately. Your money is safe from this moment forward.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-title">Redirect &amp; Build</div>
-        <div class="step-body">Monthly contributions that were going into the 401(k) now go into the whole life policy. The $20k money market also funds the policy, multiplying your coverage immediately.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-title">Leverage &amp; Grow</div>
-        <div class="step-body">While you're still working, the FIA's annual free withdrawal provision pulls dollars out and sends them directly into the policy. They cross the tax threshold once; from that point on they grow tax-free for the rest of your life.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-title">Retire with Certainty</div>
-        <div class="step-body">FIA turns on as lifetime income. Your policy provides tax-free access to cash. Social Security completes the picture. You control your cash flow. The mortgage is not a concern.</div>
+  <div class="section section--light">
+    <div class="wrap">
+      <span class="eyebrow">The Timeline</span>
+      <h2 class="sec-title" style="text-align:center; margin-bottom:48px;">How This Unfolds Over the Next 7 Years</h2>
+      <div class="process-wrap">
+        <div class="process-item">
+          <div class="step-num">1</div>
+          <div class="step-line" aria-hidden="true"></div>
+          <div class="step-body">
+            <div class="step-title">Transfer &amp; Protect</div>
+            <div class="step-desc">$300k moves from the 401(k) into a Fixed Index Annuity via a direct rollover. Market risk is eliminated immediately. Your money is safe from this moment forward.</div>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="step-num">2</div>
+          <div class="step-line" aria-hidden="true"></div>
+          <div class="step-body">
+            <div class="step-title">Redirect &amp; Build</div>
+            <div class="step-desc">Monthly contributions that were going into the 401(k) now go into the whole life policy. The $20k money market also funds the policy, multiplying your coverage immediately.</div>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="step-num">3</div>
+          <div class="step-line" aria-hidden="true"></div>
+          <div class="step-body">
+            <div class="step-title">Leverage &amp; Grow</div>
+            <div class="step-desc">While you're still working, the FIA's annual free withdrawal provision pulls dollars out and sends them directly into the policy. They cross the tax threshold once; from that point on they grow tax-free for the rest of your life.</div>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Retire with Certainty</div>
+            <div class="step-desc">The FIA turns on as guaranteed lifetime income. Your policy provides tax-free access to cash whenever you need it. Social Security completes the picture. You control your cash flow completely. The mortgage is not a concern.</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- ESTATE: YOUR MOTHER -->
-  <div class="estate-section">
-    <div class="section-title">Protecting Your Mother's Estate</div>
-    <div class="estate-grid">
-      <div class="estate-card">
-        <div class="ec-title">Power of Attorney (POA)</div>
-        <p>Establish POA on your mother's financial accounts now, before it is needed. Without it, if she becomes unable to make decisions, you would need to go through the courts to access or manage her funds; a process that is slow, expensive, and entirely avoidable. This one step protects both of you.</p>
-      </div>
-      <div class="estate-card">
-        <div class="ec-title">Trust vs. Will: Why It Matters</div>
-        <p>A will is a request; it still goes through probate court, which takes time, costs money, and is public record. A trust is a legal structure that holds assets and passes them directly to beneficiaries with no court involvement, no delays, and no public record. If your mother has a will but not a trust, the trust is the next conversation.</p>
+  <!-- PROTECTING YOUR MOTHER -->
+  <div class="section section--dark">
+    <div class="wrap">
+      <span class="eyebrow">Protecting Your Mother's Estate</span>
+      <div class="estate-grid">
+        <div class="estate-card">
+          <div class="estate-card-title">⚖️ Power of Attorney (POA)</div>
+          <p>Establish POA on your mother's financial accounts now, before it is needed. Without it, if she becomes unable to make decisions, you would need to go through the courts to access or manage her funds; a process that is slow, expensive, and entirely avoidable. This one step protects both of you.</p>
+        </div>
+        <div class="estate-card">
+          <div class="estate-card-title">🏛️ Trust vs. Will: Why It Matters</div>
+          <p>A will is a request; it still goes through probate court, which takes time, costs money, and is public record. A trust is a legal structure that holds assets and passes them directly to beneficiaries with no court involvement, no delays, and no public record. If your mother has a will but not a trust, the trust is the next conversation.</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- OUTCOME STATEMENT -->
-  <div class="outcome-bar">
-    <div class="ob-label">The Bottom Line</div>
-    <div class="ob-text">
-      You have worked for decades and your money has been locked away, exposed to markets you cannot control, and taxed at every turn. This strategy changes all three of those things at once. Your $300k is protected and guaranteed to grow. Every dollar moved into the policy becomes a tax shelter that also gives you back access to your own hard-earned money; to enhance your lifestyle now, not just at retirement. And when you pass, your family receives a windfall that is significantly larger than what you put in. Your retirement is laddered: guaranteed income from the FIA, lifetime access and legacy from the policy, and Social Security as the floor. You will know exactly where every dollar is and exactly what it is doing for the rest of your life.
+  <!-- BOTTOM LINE -->
+  <div class="bottom-line">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--accent);">The Bottom Line</span>
+      <div class="bottom-line-title">
+        You have worked for decades. Your money has been locked away, exposed to markets you cannot control, and taxed at every turn. This strategy changes all three of those things at once.
+      </div>
+      <p class="bottom-line-text">
+        Your $300k is protected and guaranteed to grow. Every dollar moved into the policy becomes a tax shelter that also gives you back access to your own hard-earned money; to enhance your lifestyle now, not just at retirement. And when you pass, your family receives a windfall that is significantly larger than what you put in. Your retirement is laddered: guaranteed income from the FIA, lifetime access and legacy from the policy, and Social Security as the floor. You will know exactly where every dollar is and exactly what it is doing for the rest of your life.
+      </p>
     </div>
   </div>
 
   <!-- FOOTER -->
   <div class="footer">
-    <strong>Hidden Gems Financial</strong> &nbsp;|&nbsp; Wayne M. Carr &nbsp;|&nbsp;
-    hiddengemsfinancial.com &nbsp;|&nbsp; Bespoke Financial Strategies · Trust · Tax Mitigation · Insurance<br/>
-    <span style="margin-top:5px; display:inline-block;">This document is for educational purposes and is intended solely for the individual named above.</span>
+    <div class="wrap">
+      <p><span>Hidden Gems Financial</span> &nbsp;·&nbsp; Wayne M. Carr &nbsp;·&nbsp; hiddengemsfinancial.com &nbsp;·&nbsp; Bespoke Financial Strategies · Trust · Tax Mitigation · Insurance</p>
+      <p style="margin-top:6px;">This document is for educational purposes and is intended solely for the individual named above.</p>
+    </div>
   </div>
 
 </body>
