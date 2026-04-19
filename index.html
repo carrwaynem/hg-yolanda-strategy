@@ -103,11 +103,11 @@
       position: relative;
       z-index: 1;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 40px;
     }
-    .header-left { flex: 1; }
+    .header-left { flex: 1; display: flex; flex-direction: column; justify-content: center; }
     .header-badge {
       display: inline-flex;
       align-items: center;
@@ -150,8 +150,11 @@
       font-size: 11px;
     }
     .header-logo {
-      height: 120px;
-      width: auto;
+      height: auto;
+      width: 260px;
+      max-width: 35%;
+      object-fit: contain;
+      object-position: left center;
       opacity: 0.92;
       flex-shrink: 0;
     }
@@ -594,7 +597,7 @@
 
       .header { padding: 36px 0 32px; }
       .header-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
-      .header-logo { height: 52px; }
+      .header-logo { width: 160px; max-width: 45%; }
       .header h1 { font-size: 26px; }
 
       .snapshot-grid { grid-template-columns: 1fr; }
@@ -629,6 +632,12 @@
     <div class="header-glow" aria-hidden="true"></div>
     <div class="wrap">
       <div class="header-inner">
+        <img
+          src="https://assets.cdn.filesafe.space/VAzLM9UQAimhEsqIbaoE/media/64d12ed29b131f4bfb22d4f1.png"
+          alt="Hidden Gems Financial"
+          class="header-logo"
+          onerror="this.style.display='none'"
+        />
         <div class="header-left">
           <div class="header-badge">
             <span class="header-badge-dot" aria-hidden="true"></span>
@@ -637,12 +646,6 @@
           <h1>Yolanda's <span>Financial Blueprint</span></h1>
           <p class="header-sub">Prepared by Hidden Gems Financial &nbsp;·&nbsp; Wayne M. Carr</p>
         </div>
-        <img
-          src="https://assets.cdn.filesafe.space/VAzLM9UQAimhEsqIbaoE/media/64d12ed29b131f4bfb22d4f1.png"
-          alt="Hidden Gems Financial"
-          class="header-logo"
-          onerror="this.style.display='none'"
-        />
       </div>
     </div>
   </div>
